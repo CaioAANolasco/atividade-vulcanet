@@ -5,6 +5,7 @@
 	background-color: palette.$secondary-color !important;
 	color: palette.$white;
 	padding: 0.8rem;
+	margin-bottom: 0.1rem;
 }
 
 .menu-icon {
@@ -18,10 +19,14 @@
 .tag {
 	color: palette.$white !important;
 	background-color: palette.$secondary-color !important;
-	margin: 0 0.2rem 0 0.2rem;
+	margin: 0.5rem 0.2rem 0 0.2rem;
 	outline: 0.07rem solid black;
 }
 
+.tag-text {
+	margin: 0 0.5rem;
+}
+
 .tags-container {
-	padding: 0.5rem;
+	padding: 0 0.5rem 0.5rem;
 }

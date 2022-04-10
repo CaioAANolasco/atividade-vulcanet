@@ -1,11 +1,9 @@
-import React from "react";
-import { Counter } from "../features/counter/Counter";
-import MenuBar from "./MenuBar";
+import Sidebar from "./Sidebar";
 
 function App() {
 	return (
 		<div>
-			<MenuBar />
+			<Sidebar />
 		</div>
 	);
 }

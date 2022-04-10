@@ -1,7 +1,7 @@
 @use "palette";
 
-.menu-container {
+.sidebar-container {
+	height: 100vh;
+	width: 20vw;
 	background-color: palette.$primary-color;
-	width: 100%;
-	height: 100%;
 }

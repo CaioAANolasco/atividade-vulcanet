@@ -1,4 +1,3 @@
-import { Classes, Button } from "@blueprintjs/core";
 import TagsArea from "./TagsArea";
 import "./styles/menu-bar.scss";
 
@@ -10,7 +9,9 @@ const MenuBar = () => {
 			<TagsArea text="Assignee" />
 			<TagsArea text="Watcher" />
 			<TagsArea text="Counterparty" />
-			<TagsArea text="Severitys" />
+			<TagsArea text="Severity" />
+			<TagsArea text="Source" />
+			<TagsArea text="Trader" />
 		</div>
 	);
 };

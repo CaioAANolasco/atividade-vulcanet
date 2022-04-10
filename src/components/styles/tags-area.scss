@@ -12,7 +12,7 @@
 	float: right;
 }
 
-.menu-button-container :hover {
+.menu-button-container .menu-button:hover {
 	background-color: palette.$primary-color;
 }
 
@@ -21,6 +21,8 @@
 	background-color: palette.$secondary-color;
 	margin: 0.5rem 0.2rem 0 0.2rem;
 	outline: 0.07rem solid black;
+	height: auto;
+	width: auto;
 }
 
 .tag-text {

@@ -1,4 +1,4 @@
-import { Button, Tag, Icon } from "@blueprintjs/core";
+import { Button, Tag, Icon, Classes, Card } from "@blueprintjs/core";
 import { useState } from "react";
 import "./styles/tags-area.scss";
 
@@ -24,14 +24,10 @@ const TagsArea: React.FC<TagsAreaProps> = (props: TagsAreaProps) => {
 
 	return (
 		<div className="menu-button-container">
-			<Button
-				text={props.text}
-				className="menu-button"
-				alignText="left"
-				rightIcon="chevron-right"
-				fill={true}
-				onClick={handleClick}
-			/>
+			<Card className="menu-button" elevation={4} onClick={handleClick}>
+				<label>{props.text}</label>
+				<Icon icon="chevron-right"></Icon>
+			</Card>
 			{openTags && (
 				<div className="tags-container">
 					{existingTags.map((tag) => (

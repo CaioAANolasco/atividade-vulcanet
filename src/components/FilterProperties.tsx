@@ -1,4 +1,4 @@
-import { Icon, ControlGroup, InputGroup } from "@blueprintjs/core";
+import { InputGroup } from "@blueprintjs/core";
 import "./styles/filter-properties.scss";
 
 const FilterProperties = () => {
@@ -7,7 +7,7 @@ const FilterProperties = () => {
 			<InputGroup
 				large={true}
 				leftIcon="filter"
-				placeholder="Find properties"
+				placeholder="Find Properties..."
 				className="filter-container"
 			/>
 		</div>

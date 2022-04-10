@@ -3,8 +3,12 @@
 
 .menu-button {
 	background-color: palette.$secondary-color !important;
-	color: palette.$white !important;
+	color: palette.$white;
 	padding: 0.8rem;
+}
+
+.menu-icon {
+	float: right;
 }
 
 .menu-button-container :hover {

@@ -1,0 +1,14 @@
+@use "palette";
+
+.filter-container {
+	background-color: palette.$filter-properties-background;
+}
+
+.filter-input {
+	color: palette.$filter-properties-background !important;
+}
+
+.filter-icon {
+	color: palette.$sidebar-icon-color;
+	margin: 0.8rem 0 0.8rem 0.8rem;
+}

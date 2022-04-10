@@ -16,13 +16,15 @@
 	background-color: palette.$primary-color;
 }
 
+.menu-button-container .tag:hover {
+	background-color: palette.$primary-color;
+}
+
 .tag {
 	color: palette.$white !important;
 	background-color: palette.$secondary-color;
 	margin: 0.5rem 0.2rem 0 0.2rem;
 	outline: 0.07rem solid black;
-	height: auto;
-	width: auto;
 }
 
 .tag-text {

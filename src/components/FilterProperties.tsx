@@ -4,13 +4,12 @@ import "./styles/filter-properties.scss";
 const FilterProperties = () => {
 	return (
 		<div>
-			<ControlGroup fill={true} className="filter-container">
-				<Icon className="filter-icon" icon="filter" />
-				<InputGroup
-					className="filter-input"
-					placeholder="Find properties ..."
-				/>
-			</ControlGroup>
+			<InputGroup
+				large={true}
+				leftIcon="filter"
+				placeholder="Find properties"
+				className="filter-container"
+			/>
 		</div>
 	);
 };

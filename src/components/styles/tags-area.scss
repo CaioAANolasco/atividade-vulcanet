@@ -2,7 +2,7 @@
 @import "~@blueprintjs/core/lib/scss/variables";
 
 .menu-button {
-	background-color: palette.$secondary-color !important;
+	background-color: palette.$secondary-color;
 	color: palette.$white;
 	padding: 0.8rem;
 	margin-bottom: 0.1rem;
@@ -13,12 +13,12 @@
 }
 
 .menu-button-container :hover {
-	background-color: palette.$primary-color !important;
+	background-color: palette.$primary-color;
 }
 
 .tag {
 	color: palette.$white !important;
-	background-color: palette.$secondary-color !important;
+	background-color: palette.$secondary-color;
 	margin: 0.5rem 0.2rem 0 0.2rem;
 	outline: 0.07rem solid black;
 }

@@ -1,0 +1,34 @@
+.field-name-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.title-field {
+	width: 25%;
+}
+
+.severity-field {
+	width: 10%;
+}
+
+.status-field {
+	width: 10%;
+}
+
+.trader-field {
+	width: 18%;
+}
+
+.counterparty-field {
+	width: 18%;
+}
+
+.book-field {
+	width: 10%;
+}
+
+.source-field {
+	width: 12%;
+}

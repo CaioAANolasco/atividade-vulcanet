@@ -1,0 +1,11 @@
+@use "palette";
+@import "~@blueprintjs/core/lib/scss/variables";
+
+.navbar {
+	background-color: palette.$primary-color !important;
+	color: white;
+}
+
+.navbar-buttons .bp4-icon {
+	color: palette.$sidebar-icon-color;
+}

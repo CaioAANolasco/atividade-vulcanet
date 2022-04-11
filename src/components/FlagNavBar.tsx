@@ -1,12 +1,20 @@
-import { Card, Button } from "@blueprintjs/core";
+import { Card, Button, Label } from "@blueprintjs/core";
+import "./styles/flags-navbar.scss";
 
 const FlagNavBar = () => {
 	return (
-		<div>
-			<Card>
-				<Button text="Sets" icon="chevron-left" minimal={true}></Button>
-			</Card>
-		</div>
+		<Card className="flags-navbar-container">
+			<Button
+				small={true}
+				text="Sets"
+				icon="chevron-left"
+				minimal={true}
+				alignText="left"
+				className="flags-navbar-button"
+			></Button>
+
+			<h4 className="flags-navbar-text">OPEN FLAGS</h4>
+		</Card>
 	);
 };
 

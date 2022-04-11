@@ -1,0 +1,25 @@
+@use "palette";
+@import "~@blueprintjs/core/lib/scss/variables";
+
+.flags-navbar-container {
+	background-color: palette.$secondary-color;
+	width: 100%;
+	padding: 0.8rem 0.8rem 1.1rem 0.5rem !important;
+	text-align: center;
+}
+
+.flags-navbar-button {
+	float: left;
+	padding-left: 0 !important;
+	color: palette.$sidebar-icon-color !important;
+}
+
+.flags-navbar-button .bp4-icon {
+	margin-right: 0.1rem;
+}
+
+.flags-navbar-text {
+	align-self: center;
+	display: inline;
+	color: white;
+}

@@ -2,9 +2,15 @@
 @import "~@blueprintjs/core/lib/scss/variables";
 
 .navbar {
+	font-size: x-small !important;
+	font-family: "Signika", sans-serif;
 	background-color: palette.$primary-color !important;
 	color: white;
 	margin-bottom: 3px;
+}
+
+.navbar-icon {
+	margin-right: 1.5rem;
 }
 
 .navbar-buttons .bp4-icon {

@@ -1,12 +1,16 @@
-import { Navbar, Button, Alignment } from "@blueprintjs/core";
-import { ICON } from "@blueprintjs/core/lib/esm/common/classes";
+import { Navbar, Button, Alignment, Icon } from "@blueprintjs/core";
 import "./styles/menu-navbar.scss";
 
 const MenuNavBar = () => {
 	return (
 		<Navbar className="navbar">
 			<Navbar.Group align={Alignment.LEFT}>
-				<Navbar.Heading>Radar</Navbar.Heading>
+				<Icon
+					icon="rocket-slant"
+					className="navbar-icon"
+					size={20}
+				></Icon>
+				<Navbar.Heading>RADAR</Navbar.Heading>
 			</Navbar.Group>
 
 			<Navbar.Group className="navbar-buttons" align={Alignment.RIGHT}>

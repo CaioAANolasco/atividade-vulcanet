@@ -1,14 +1,16 @@
-import MenuBar from "./MenuBar";
+import MenuFlags from "./MenuFlags";
 import FilterProperties from "./FilterProperties";
 import FlagNavBar from "./FlagNavBar";
+import MenuNavBar from "./MenuNavBar";
 import "./styles/sidebar.scss";
 
 const Sidebar = () => {
 	return (
 		<div className="sidebar-container">
+			<MenuNavBar />
 			<FlagNavBar />
 			<FilterProperties />
-			<MenuBar />
+			<MenuFlags />
 		</div>
 	);
 };

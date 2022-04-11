@@ -1,8 +1,8 @@
-import MenuFlags from "./MenuFlags";
-import FilterProperties from "./FilterProperties";
-import FlagNavBar from "./FlagNavBar";
-import MenuNavBar from "./MenuNavBar";
-import "./styles/sidebar.scss";
+import MenuFlags from "./sidebar-components/MenuFlags";
+import FilterProperties from "./sidebar-components/FilterProperties";
+import FlagNavBar from "./sidebar-components/FlagNavBar";
+import MenuNavBar from "./sidebar-components/MenuNavBar";
+import "./styles/sidebar-styles/sidebar.scss";
 
 const Sidebar = () => {
 	return (

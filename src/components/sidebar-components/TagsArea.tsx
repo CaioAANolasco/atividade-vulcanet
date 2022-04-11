@@ -1,6 +1,6 @@
-import { Tag, Icon, Classes, Card } from "@blueprintjs/core";
+import { Tag, Icon, Card } from "@blueprintjs/core";
 import { useState } from "react";
-import "./styles/tags-area.scss";
+import "../styles/sidebar-styles/tags-area.scss";
 
 interface TagsAreaProps {
 	text: String;

@@ -1,5 +1,5 @@
-import { Card, Button, Label } from "@blueprintjs/core";
-import "./styles/flags-navbar.scss";
+import { Card, Button } from "@blueprintjs/core";
+import "../styles/sidebar-styles/flags-navbar.scss";
 
 const FlagNavBar = () => {
 	return (

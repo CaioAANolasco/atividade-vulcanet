@@ -1,5 +1,5 @@
 import { Navbar, Button, Alignment, Icon } from "@blueprintjs/core";
-import "./styles/menu-navbar.scss";
+import "../styles/sidebar-styles/menu-navbar.scss";
 
 const MenuNavBar = () => {
 	return (

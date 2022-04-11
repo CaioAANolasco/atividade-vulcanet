@@ -1,4 +1,4 @@
-@use "palette";
+@use "../palette.scss";
 
 .filter-container {
 	background-color: palette.$filter-properties-background !important;

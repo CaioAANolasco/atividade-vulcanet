@@ -1,5 +1,5 @@
 import { InputGroup } from "@blueprintjs/core";
-import "./styles/filter-properties.scss";
+import "../styles/sidebar-styles/filter-properties.scss";
 
 const FilterProperties = () => {
 	return (

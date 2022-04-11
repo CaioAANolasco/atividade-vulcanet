@@ -1,4 +1,9 @@
 @use "../palette.scss";
 
+.organize-bar {
+	width: 80%;
+	background-color: palette.$organize-bar-backgorund;
+}
+
 .organize-bar-search {
 }

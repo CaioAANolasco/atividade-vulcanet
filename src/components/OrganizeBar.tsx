@@ -3,7 +3,7 @@ import "./styles/organize-styles/organize-bar.scss";
 
 const OrganizeBar = () => {
 	return (
-		<Navbar>
+		<Navbar className="organize-bar">
 			<NavbarGroup>
 				<InputGroup
 					leftIcon="search"
@@ -15,3 +15,5 @@ const OrganizeBar = () => {
 		</Navbar>
 	);
 };
+
+export default OrganizeBar;

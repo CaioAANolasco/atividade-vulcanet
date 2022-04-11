@@ -1,9 +1,12 @@
 import Sidebar from "./Sidebar";
+import OrganizeBar from "./OrganizeBar";
+import "./styles/app.scss";
 
 function App() {
 	return (
-		<div>
+		<div className="app-display">
 			<Sidebar />
+			<OrganizeBar />
 		</div>
 	);
 }

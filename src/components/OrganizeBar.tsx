@@ -1,4 +1,10 @@
-import { Button, InputGroup, Navbar, NavbarGroup } from "@blueprintjs/core";
+import {
+	Button,
+	InputGroup,
+	Navbar,
+	NavbarDivider,
+	NavbarGroup,
+} from "@blueprintjs/core";
 import "./styles/organize-styles/organize-bar.scss";
 
 const OrganizeBar = () => {
@@ -9,7 +15,7 @@ const OrganizeBar = () => {
 					leftIcon="search"
 					round={true}
 					placeholder="Search for assets"
-					className="organize-bar-search"
+					className="search-bar"
 				></InputGroup>
 				<Button
 					text="List"
@@ -17,12 +23,20 @@ const OrganizeBar = () => {
 					minimal={true}
 					active={true}
 					intent="primary"
+					className="organize-button"
 				/>
 				<Button
 					text="Group by trader"
 					icon="grid-view"
 					minimal={true}
+					className="organize-button"
 				/>
+				<NavbarDivider />
+				<Button icon="caret-down" minimal={true}></Button>
+			</NavbarGroup>
+
+			<NavbarGroup align="right">
+				<Button text="Take action" disabled={true} />
 			</NavbarGroup>
 		</Navbar>
 	);

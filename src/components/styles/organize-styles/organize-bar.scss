@@ -6,9 +6,18 @@
 }
 
 .search-group {
-	width: 40%;
-	justify-content: space-around;
+	width: 60%;
+	justify-content: flex-start;
 }
 
-.organize-bar-search {
+.search-bar {
+	width: 40%;
+}
+
+.organize-button {
+	margin-left: 1rem;
+}
+
+#action-button {
+	float: right;
 }

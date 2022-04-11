@@ -3,7 +3,7 @@ import "./styles/menu-bar.scss";
 
 const MenuFlags = () => {
 	return (
-		<div className="menu-container">
+		<div>
 			<TagsArea text="Status" />
 			<TagsArea text="Time" />
 			<TagsArea text="Assignee" />

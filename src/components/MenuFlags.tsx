@@ -1,5 +1,4 @@
 import TagsArea from "./TagsArea";
-import "./styles/menu-bar.scss";
 
 const MenuFlags = () => {
 	return (

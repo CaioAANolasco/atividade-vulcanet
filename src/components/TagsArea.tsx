@@ -26,10 +26,7 @@ const TagsArea: React.FC<TagsAreaProps> = (props: TagsAreaProps) => {
 		<div className="menu-button-container">
 			<Card className="menu-button" elevation={4} onClick={handleClick}>
 				<label>{props.text}</label>
-				<Icon
-					className={"menu-icon " + Classes.TEXT_MUTED}
-					icon="chevron-right"
-				></Icon>
+				<Icon className="menu-icon" icon="chevron-right"></Icon>
 			</Card>
 			{openTags && (
 				<div className="tags-container">

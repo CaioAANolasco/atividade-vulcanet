@@ -1,10 +1,11 @@
 import { Action } from "../actions";
 import { ActionType } from "../actions-types";
-import { ActiveInfoProps } from "../../components/actives-components/ActiveInfo";
+import ActiveInformation from "../../ActiveInformation";
+import producer from "immer";
 
-const jsonData: ActiveInfoProps[] = require("../../ACTIVEINFO.json");
+const jsonData: ActiveInformation[] = require("../../ACTIVEINFO.json");
 const initialState = jsonData;
-const activesReducer = (state = initialState, action: Action) => {
+const activesReducer = producer((state = initialState, action: Action) => {
 	switch (action.type) {
 		case ActionType.FETCH_ACTIVES:
 			return state;
@@ -12,9 +13,14 @@ const activesReducer = (state = initialState, action: Action) => {
 			//sort by price
 			return state;
 		case ActionType.FILTER_NAME:
+			const filterInput = action.payload;
+			let filteredValues = state.filter((active: ActiveInformation) => {
+				return active.activeInfo.toLowerCase().includes(filterInput);
+			});
+			state = filteredValues;
 			return state;
 		default:
 			return state;
 	}
-};
+});
 export default activesReducer;

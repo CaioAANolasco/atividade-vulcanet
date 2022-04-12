@@ -1,19 +1,9 @@
-import { Card, Tag, Code, Intent } from "@blueprintjs/core";
-import { type } from "os";
+import { Card, Tag, Code } from "@blueprintjs/core";
 import "../styles/active-info-styles/active-info.scss";
 import "../styles/fields-name-styles/field-names.scss";
+import ActiveInformation from "../../ActiveInformation";
 
-interface ActiveInfoProps {
-	activeInfo: String;
-	severity: Intent;
-	status: String;
-	trader: String;
-	counterparty: String;
-	book: String;
-	source: String;
-}
-
-const ActiveInfo: React.FC<ActiveInfoProps> = (props) => {
+const ActiveInfo: React.FC<ActiveInformation> = (props) => {
 	return (
 		<Card className="active-display">
 			<p className="title-field">{props.activeInfo}</p>
@@ -34,4 +24,3 @@ const ActiveInfo: React.FC<ActiveInfoProps> = (props) => {
 };
 
 export default ActiveInfo;
-export type { ActiveInfoProps };

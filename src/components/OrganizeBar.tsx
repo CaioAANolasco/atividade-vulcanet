@@ -5,9 +5,16 @@ import {
 	NavbarDivider,
 	NavbarGroup,
 } from "@blueprintjs/core";
+import React, { ChangeEvent, useState } from "react";
 import "./styles/organize-styles/organize-bar.scss";
 
 const OrganizeBar = () => {
+	const [searchInput, setSearchInput] = useState("");
+
+	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+		setSearchInput(e.target.value);
+	};
+
 	return (
 		<Navbar className="organize-bar">
 			<NavbarGroup className="search-group" align="left">
@@ -16,6 +23,7 @@ const OrganizeBar = () => {
 					round={true}
 					placeholder="Search for assets"
 					className="search-bar"
+					onChange={handleChange}
 				></InputGroup>
 				<Button
 					text="List"

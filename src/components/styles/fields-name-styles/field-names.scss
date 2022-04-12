@@ -8,7 +8,9 @@
 }
 
 .title-field {
-	width: 25%;
+	flex-wrap: wrap;
+	width: 35%;
+	margin-right: 5%;
 }
 
 .severity-field {

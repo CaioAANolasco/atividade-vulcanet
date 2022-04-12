@@ -11,14 +11,14 @@ export const fetchActives = (): FetchActivesAction => {
 	};
 };
 
-export const filterByTag = (payload: String): FilterTagAction => {
+export const filterByTag = (payload: string): FilterTagAction => {
 	return {
 		type: ActionType.FILTER_TAG,
 		payload: payload,
 	};
 };
 
-export const filterByName = (payload: String): FilterNameAction => {
+export const filterByName = (payload: string): FilterNameAction => {
 	return {
 		type: ActionType.FILTER_NAME,
 		payload: payload,

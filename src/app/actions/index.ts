@@ -6,12 +6,12 @@ export interface FetchActivesAction {
 
 export interface FilterTagAction {
 	type: ActionType.FILTER_TAG;
-	payload: String;
+	payload: string;
 }
 
 export interface FilterNameAction {
 	type: ActionType.FILTER_NAME;
-	payload: String;
+	payload: string;
 }
 
 export type Action = FetchActivesAction | FilterTagAction | FilterNameAction;

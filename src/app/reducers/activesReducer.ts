@@ -6,7 +6,10 @@ import producer from "immer";
 const jsonData: ActiveInformation[] = require("../../ACTIVEINFO.json");
 const initialState = jsonData;
 const activesReducer = producer(
-	(activesState = initialState, action: Action) => {
+	(
+		activesState = { actives: initialState, tags: [], input: "" },
+		action: Action
+	) => {
 		switch (action.type) {
 			case ActionType.FETCH_ACTIVES:
 				return activesState;
@@ -15,14 +18,16 @@ const activesReducer = producer(
 				return activesState;
 			case ActionType.FILTER_NAME:
 				const filterInput = action.payload;
-				let filteredValues = activesState.filter(
+				let filteredValues = activesState.actives.filter(
 					(active: ActiveInformation) => {
 						return active.activeInfo
 							.toLowerCase()
 							.includes(filterInput);
 					}
 				);
-				return filteredValues;
+
+				activesState.actives = filteredValues;
+				return activesState;
 			default:
 				return activesState;
 		}

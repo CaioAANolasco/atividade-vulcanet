@@ -5,7 +5,7 @@ import { fetchActives } from "../app/actions-creators";
 import ActiveInformation from "../ActiveInformation";
 
 const ActiveList = () => {
-	const actives = useAppSelector((state) => state.actives);
+	const actives = useAppSelector((state) => state.actives.actives);
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {

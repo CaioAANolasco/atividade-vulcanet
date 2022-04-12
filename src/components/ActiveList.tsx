@@ -10,7 +10,7 @@ const ActiveList = () => {
 
 	useEffect(() => {
 		dispatch(fetchActives);
-	});
+	}, [dispatch]);
 
 	return (
 		<div>

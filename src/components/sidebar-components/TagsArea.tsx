@@ -24,7 +24,12 @@ const TagsArea: React.FC<TagsAreaProps> = (props: TagsAreaProps) => {
 
 	return (
 		<div className="menu-button-container">
-			<Card className="menu-button" elevation={4} onClick={handleClick}>
+			<Card
+				className="menu-button"
+				elevation={4}
+				onClick={handleClick}
+				interactive={true}
+			>
 				<label>{props.text}</label>
 				<Icon className="menu-icon" icon="chevron-right"></Icon>
 			</Card>

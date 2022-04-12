@@ -1,6 +1,7 @@
 import Sidebar from "./Sidebar";
 import OrganizeBar from "./OrganizeBar";
 import FieldsNames from "./FieldsNames";
+import ActiveList from "./ActiveList";
 import "./styles/app.scss";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 			<div className="actives-display">
 				<OrganizeBar />
 				<FieldsNames />
+				<ActiveList />
 			</div>
 		</div>
 	);

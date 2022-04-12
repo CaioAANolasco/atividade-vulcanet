@@ -1,11 +1,12 @@
 import { Action } from "../actions";
 import { ActionType } from "../actions-types";
+import { ActiveInfoProps } from "../../components/actives-components/ActiveInfo";
 
-const initialState = {};
-const filterStore = (state = initialState, action: Action) => {
+const jsonData: ActiveInfoProps[] = require("../../ACTIVEINFO.json");
+const initialState = jsonData;
+const activesReducer = (state = initialState, action: Action) => {
 	switch (action.type) {
 		case ActionType.FETCH_ACTIVES:
-			//sort alphabetically
 			return state;
 		case ActionType.FILTER_TAG:
 			//sort by price
@@ -16,4 +17,4 @@ const filterStore = (state = initialState, action: Action) => {
 			return state;
 	}
 };
-export default filterStore;
+export default activesReducer;

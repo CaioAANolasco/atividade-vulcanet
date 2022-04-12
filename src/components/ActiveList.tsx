@@ -1,11 +1,19 @@
-import ActiveInfo, { ActiveInfoProps } from "./actives-components/ActiveInfo";
+import ActiveInfo from "./actives-components/ActiveInfo";
+import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { useEffect } from "react";
+import { fetchActives } from "../app/actions-creators";
 
 const ActiveList = () => {
-	const jsonData: ActiveInfoProps[] = require("../ACTIVEINFO.json");
+	const actives = useAppSelector((state) => state.actives);
+	const dispatch = useAppDispatch();
+
+	useEffect(() => {
+		dispatch(fetchActives);
+	});
 
 	return (
 		<div>
-			{jsonData.map((active) => {
+			{actives.map((active) => {
 				return (
 					<ActiveInfo
 						activeInfo={active.activeInfo}

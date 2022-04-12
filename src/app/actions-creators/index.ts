@@ -5,10 +5,9 @@ import {
 } from "../actions";
 import { ActionType } from "../actions-types";
 
-export const fetchActives = (payload: String[]): FetchActivesAction => {
+export const fetchActives = (): FetchActivesAction => {
 	return {
 		type: ActionType.FETCH_ACTIVES,
-		payload: payload,
 	};
 };
 

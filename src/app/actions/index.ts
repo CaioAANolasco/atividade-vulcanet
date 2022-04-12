@@ -2,7 +2,6 @@ import { ActionType } from "../actions-types";
 
 export interface FetchActivesAction {
 	type: ActionType.FETCH_ACTIVES;
-	payload: String[];
 }
 
 export interface FilterTagAction {

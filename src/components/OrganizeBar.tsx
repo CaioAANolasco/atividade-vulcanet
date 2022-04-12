@@ -7,7 +7,7 @@ import {
 } from "@blueprintjs/core";
 import React, { ChangeEvent, useState } from "react";
 import "./styles/organize-styles/organize-bar.scss";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { useAppDispatch } from "../app/hooks";
 import { filterByName } from "../app/actions-creators";
 
 const OrganizeBar = () => {

@@ -1,60 +1,97 @@
-import { Card, Icon } from "@blueprintjs/core";
+import { Card, Icon, Button } from "@blueprintjs/core";
 import { useDispatch } from "react-redux";
 import { sortActives } from "../app/actions-creators";
 import "./styles/fields-name-styles/field-names.scss";
 import { SortingFields, SortTypes } from "../SortingFields";
+import { useState } from "react";
+import FieldNameButton from "./fields-names-components/FieldNameButton";
 
 const FieldsNames = () => {
+	const [selectedSortField, setSelectedSortField] = useState("severity");
 	const dispatch = useDispatch();
+
 	const handleClick = (sortField: SortTypes) => {
+		setSelectedSortField(sortField);
 		dispatch(sortActives(sortField));
 	};
 
 	return (
 		<Card className="field-name-container">
-			<h5
-				className="title-field"
-				onClick={(e) => handleClick(SortingFields.ACTIVE_INFO)}
-			>
-				TITLE
-			</h5>
+			<FieldNameButton
+				field="activeInfo"
+				handleClick={handleClick}
+				intent={
+					selectedSortField === SortingFields.ACTIVE_INFO
+						? "primary"
+						: "none"
+				}
+			/>
 			<div
 				className="severity-field"
-				onClick={(e) => handleClick(SortingFields.SEVERITY)}
+				onClick={() => handleClick(SortingFields.SEVERITY)}
 			>
-				<Icon icon="error" intent="primary" />
-				<Icon icon="caret-down" intent="primary" />
+				<Icon
+					icon="error"
+					intent={
+						selectedSortField === SortingFields.SEVERITY
+							? "primary"
+							: "none"
+					}
+				/>
+				<Icon
+					icon="caret-down"
+					intent={
+						selectedSortField === SortingFields.SEVERITY
+							? "primary"
+							: "none"
+					}
+				/>
 			</div>
-			<h5
-				className="status-field"
-				onClick={(e) => handleClick(SortingFields.STATUS)}
-			>
-				STATUS
-			</h5>
-			<h5
-				className="trader-field"
-				onClick={(e) => handleClick(SortingFields.TRADER)}
-			>
-				TRADER
-			</h5>
-			<h5
-				className="counterparty-field"
-				onClick={(e) => handleClick(SortingFields.COUNTERPARTY)}
-			>
-				COUNTERPARTY
-			</h5>
-			<h5
-				className="book-field"
-				onClick={(e) => handleClick(SortingFields.BOOK)}
-			>
-				BOOK
-			</h5>
-			<h5
-				className="source-field"
-				onClick={(e) => handleClick(SortingFields.SOURCE)}
-			>
-				SOURCE
-			</h5>
+			<FieldNameButton
+				field="status"
+				handleClick={handleClick}
+				intent={
+					selectedSortField === SortingFields.STATUS
+						? "primary"
+						: "none"
+				}
+			/>
+			<FieldNameButton
+				field="trader"
+				handleClick={handleClick}
+				intent={
+					selectedSortField === SortingFields.TRADER
+						? "primary"
+						: "none"
+				}
+			/>
+			<FieldNameButton
+				field="counterparty"
+				handleClick={handleClick}
+				intent={
+					selectedSortField === SortingFields.COUNTERPARTY
+						? "primary"
+						: "none"
+				}
+			/>
+			<FieldNameButton
+				field="book"
+				handleClick={handleClick}
+				intent={
+					selectedSortField === SortingFields.BOOK
+						? "primary"
+						: "none"
+				}
+			/>
+			<FieldNameButton
+				field="source"
+				handleClick={handleClick}
+				intent={
+					selectedSortField === SortingFields.SOURCE
+						? "primary"
+						: "none"
+				}
+			/>
 		</Card>
 	);
 };

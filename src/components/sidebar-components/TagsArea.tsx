@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addFilterByTag } from "../../app/actions-creators";
 import "../styles/sidebar-styles/tags-area.scss";
+import FilterTag from "./FilterTag";
 
 interface TagsAreaProps {
 	text: String;
@@ -43,18 +44,7 @@ const TagsArea: React.FC<TagsAreaProps> = (props: TagsAreaProps) => {
 			{openTags && (
 				<div className="tags-container">
 					{existingTags.map((tag) => (
-						<Tag
-							large={true}
-							className="tag"
-							data-id={tag}
-							onClick={(e) => handleClickOnTag(tag)}
-						>
-							<Icon
-								icon="small-cross"
-								onClick={(e) => handleRemove(tag)}
-							></Icon>
-							<label className="tag-text">{tag}</label>
-						</Tag>
+						<FilterTag tagID={tag} handleRemove={handleRemove} />
 					))}
 				</div>
 			)}

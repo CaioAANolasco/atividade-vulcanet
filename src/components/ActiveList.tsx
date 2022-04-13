@@ -6,9 +6,20 @@ import ActiveInformation from "../ActiveInformation";
 
 const ActiveList = () => {
 	const selectedActives = useAppSelector(
-		({ actives: { actives, inputFilter } }) => {
+		({ actives: { actives, inputFilter, tagsFilter } }) => {
 			return actives.filter((active) => {
-				return active.activeInfo.toLowerCase().includes(inputFilter);
+				const selectedByName = active.activeInfo
+					.toLowerCase()
+					.includes(inputFilter);
+
+				let selectedByTag: boolean;
+				if (tagsFilter.length === 0) {
+					selectedByTag = true;
+				} else {
+					selectedByTag = tagsFilter.includes(active.status);
+				}
+
+				return selectedByName && selectedByTag;
 			});
 		}
 	);

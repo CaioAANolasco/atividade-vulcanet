@@ -10,12 +10,14 @@ interface ActivesState {
 	actives: ActiveInformation[];
 	tagsFilter: string[];
 	inputFilter: string;
+	sortBy: string;
 }
 
 const initialState: ActivesState = {
 	actives: initialStateActiveData,
 	tagsFilter: [],
 	inputFilter: "",
+	sortBy: "",
 };
 
 const activesReducer = producer(
@@ -34,6 +36,8 @@ const activesReducer = producer(
 				return activesState;
 			case ActionType.FILTER_NAME:
 				activesState.inputFilter = action.payload.toLowerCase();
+				return activesState;
+			case ActionType.SORT_ACTIVES:
 				return activesState;
 			default:
 				return activesState;

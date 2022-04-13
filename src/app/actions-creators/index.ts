@@ -4,6 +4,7 @@ import {
 	AddFilterTagAction,
 	RemoveFilterTagAction,
 	ChangeSidebarFilters,
+	SortActivesAction,
 } from "../actions";
 import { ActionType } from "../actions-types";
 
@@ -37,6 +38,13 @@ export const filterByName = (payload: string): FilterNameAction => {
 export const changeSidebarFilters = (payload: string): ChangeSidebarFilters => {
 	return {
 		type: ActionType.CHANGE_SIDEBAR_FILTERS,
+		payload: payload,
+	};
+};
+
+export const sortActives = (payload: string): SortActivesAction => {
+	return {
+		type: ActionType.SORT_ACTIVES,
 		payload: payload,
 	};
 };

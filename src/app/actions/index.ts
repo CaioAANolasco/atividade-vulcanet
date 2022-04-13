@@ -24,9 +24,15 @@ export interface ChangeSidebarFilters {
 	payload: string;
 }
 
+export interface SortActivesAction {
+	type: ActionType.SORT_ACTIVES;
+	payload: string;
+}
+
 export type Action =
 	| FetchActivesAction
 	| AddFilterTagAction
 	| RemoveFilterTagAction
 	| FilterNameAction
-	| ChangeSidebarFilters;
+	| ChangeSidebarFilters
+	| SortActivesAction;

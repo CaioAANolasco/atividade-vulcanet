@@ -5,4 +5,6 @@ export enum ActionType {
 	FILTER_NAME = "filter_name",
 
 	CHANGE_SIDEBAR_FILTERS = "change_sidebar_filters",
+
+	SORT_ACTIVES = "sort_actives",
 }

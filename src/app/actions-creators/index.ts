@@ -35,7 +35,7 @@ export const filterByName = (payload: string): FilterNameAction => {
 	};
 };
 
-export const filterTagType = (payload: string): ChangeSidebarFilters => {
+export const changeSidebarFilters = (payload: string): ChangeSidebarFilters => {
 	return {
 		type: ActionType.CHANGE_SIDEBAR_FILTERS,
 		payload: payload,

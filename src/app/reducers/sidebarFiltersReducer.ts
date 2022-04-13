@@ -10,11 +10,11 @@ const initialState: FiltersState = {
 	filterInput: "",
 };
 
-const activesReducer = producer(
+const sidebarReducer = producer(
 	(filtersState: FiltersState = initialState, action: Action) => {
 		switch (action.type) {
 			case ActionType.CHANGE_SIDEBAR_FILTERS:
-				filtersState.filterInput = action.payload;
+				filtersState.filterInput = action.payload.toLowerCase();
 				return filtersState;
 			default:
 				return filtersState;
@@ -22,4 +22,4 @@ const activesReducer = producer(
 	},
 	initialState
 );
-export default activesReducer;
+export default sidebarReducer;

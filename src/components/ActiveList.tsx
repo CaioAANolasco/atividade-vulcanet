@@ -1,13 +1,15 @@
 import ActiveInfo from "./actives-components/ActiveInfo";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { fetchActives } from "../app/actions-creators";
 import ActiveInformation from "../ActiveInformation";
 import { SortingFields, SortTypes } from "../SortingFields";
+import { Intent } from "@blueprintjs/core";
 
 const ActiveList = () => {
 	const selectedActives = useAppSelector(
 		({ actives: { actives, inputFilter, tagsFilter } }) => {
+			console.log("filtering");
 			return actives.filter((active) => {
 				const selectedByName = active.activeInfo
 					.toLowerCase()
@@ -29,11 +31,17 @@ const ActiveList = () => {
 
 	let sortCondition: SortTypes;
 	sortCondition = useAppSelector((state) => state.actives.sortBy);
-	selectedActives.sort((a, b) =>
-		a[sortCondition]
-			.toLowerCase()
-			.localeCompare(b[sortCondition].toLowerCase())
-	);
+
+	useMemo(() => {
+		if (sortCondition === SortingFields.SEVERITY) {
+		} else {
+			selectedActives.sort((a, b) =>
+				a[sortCondition]
+					.toLowerCase()
+					.localeCompare(b[sortCondition].toLowerCase())
+			);
+		}
+	}, [sortCondition, selectedActives]);
 
 	const dispatch = useAppDispatch();
 

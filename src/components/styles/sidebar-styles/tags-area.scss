@@ -3,7 +3,7 @@
 
 .menu-button {
 	background-color: palette.$secondary-color;
-	color: palette.$white;
+	color: $light-gray1;
 	padding: 0.8rem;
 	margin-bottom: 2px;
 	border-radius: inherit;
@@ -12,6 +12,11 @@
 .menu-icon {
 	color: $pt-icon-color;
 	float: right;
+}
+
+.menu-button-container {
+	font-size: 1rem;
+	font-weight: 300;
 }
 
 .menu-button-container .menu-button:hover {
@@ -35,7 +40,7 @@
 }
 
 .tag {
-	color: palette.$white !important;
+	color: $light-gray1 !important;
 	margin: 0.5rem 0.2rem 0 0.2rem;
 	outline: 0.07rem solid black;
 }

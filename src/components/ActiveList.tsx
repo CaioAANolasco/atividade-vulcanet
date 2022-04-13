@@ -5,7 +5,11 @@ import { fetchActives } from "../app/actions-creators";
 import ActiveInformation from "../ActiveInformation";
 
 const ActiveList = () => {
-	const actives = useAppSelector((state) => state.actives?.actives);
+	const actives = useAppSelector(({ actives: { actives, inputFilter } }) => {
+		return actives.filter((active) => {
+			return active.activeInfo.toLowerCase().includes(inputFilter);
+		});
+	});
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
@@ -14,7 +18,7 @@ const ActiveList = () => {
 
 	return (
 		<div>
-			{actives?.map((active: ActiveInformation) => {
+			{actives.map((active: ActiveInformation) => {
 				return (
 					<ActiveInfo
 						activeInfo={active.activeInfo}

@@ -27,11 +27,12 @@ const activesReducer = producer(
 				//sort by price
 				return activesState;
 			case ActionType.FILTER_NAME:
-				activesState.inputFilter = action.payload;
+				activesState.inputFilter = action.payload.toLowerCase();
 				return activesState;
 			default:
 				return activesState;
 		}
-	}
+	},
+	initialState
 );
 export default activesReducer;

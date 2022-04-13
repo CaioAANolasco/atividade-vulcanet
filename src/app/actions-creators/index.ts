@@ -7,6 +7,7 @@ import {
 	SortActivesAction,
 } from "../actions";
 import { ActionType } from "../actions-types";
+import { SortTypes } from "../../SortingFields";
 
 export const fetchActives = (): FetchActivesAction => {
 	return {
@@ -42,7 +43,7 @@ export const changeSidebarFilters = (payload: string): ChangeSidebarFilters => {
 	};
 };
 
-export const sortActives = (payload: string): SortActivesAction => {
+export const sortActives = (payload: SortTypes): SortActivesAction => {
 	return {
 		type: ActionType.SORT_ACTIVES,
 		payload: payload,

@@ -1,4 +1,5 @@
 import { ActionType } from "../actions-types";
+import { SortTypes } from "../../SortingFields";
 
 export interface FetchActivesAction {
 	type: ActionType.FETCH_ACTIVES;
@@ -26,7 +27,7 @@ export interface ChangeSidebarFilters {
 
 export interface SortActivesAction {
 	type: ActionType.SORT_ACTIVES;
-	payload: string;
+	payload: SortTypes;
 }
 
 export type Action =

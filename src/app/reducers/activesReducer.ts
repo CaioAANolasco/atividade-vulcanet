@@ -2,6 +2,7 @@ import { Action } from "../actions";
 import { ActionType } from "../actions-types";
 import ActiveInformation from "../../ActiveInformation";
 import producer from "immer";
+import { SortTypes } from "../../SortingFields";
 
 const jsonData: ActiveInformation[] = require("../../ACTIVEINFO.json");
 const initialStateActiveData = jsonData;
@@ -10,14 +11,14 @@ interface ActivesState {
 	actives: ActiveInformation[];
 	tagsFilter: string[];
 	inputFilter: string;
-	sortBy: string;
+	sortBy: SortTypes;
 }
 
 const initialState: ActivesState = {
 	actives: initialStateActiveData,
 	tagsFilter: [],
 	inputFilter: "",
-	sortBy: "",
+	sortBy: "severity",
 };
 
 const activesReducer = producer(
@@ -38,6 +39,7 @@ const activesReducer = producer(
 				activesState.inputFilter = action.payload.toLowerCase();
 				return activesState;
 			case ActionType.SORT_ACTIVES:
+				activesState.sortBy = action.payload;
 				return activesState;
 			default:
 				return activesState;

@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { useEffect } from "react";
 import { fetchActives } from "../app/actions-creators";
 import ActiveInformation from "../ActiveInformation";
+import { SortingFields, SortTypes } from "../SortingFields";
 
 const ActiveList = () => {
 	const selectedActives = useAppSelector(
@@ -25,6 +26,15 @@ const ActiveList = () => {
 			});
 		}
 	);
+
+	let sortCondition: SortTypes;
+	sortCondition = useAppSelector((state) => state.actives.sortBy);
+	selectedActives.sort((a, b) =>
+		a[sortCondition]
+			.toLowerCase()
+			.localeCompare(b[sortCondition].toLowerCase())
+	);
+
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {

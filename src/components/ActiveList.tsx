@@ -33,7 +33,14 @@ const ActiveList = () => {
 	sortCondition = useAppSelector((state) => state.actives.sortBy);
 
 	useMemo(() => {
+		const decreasingSeverity = [Intent.DANGER, Intent.WARNING, Intent.NONE];
 		if (sortCondition === SortingFields.SEVERITY) {
+			selectedActives.sort((a, b) =>
+				decreasingSeverity.indexOf(a.severity) >=
+				decreasingSeverity.indexOf(b.severity)
+					? 1
+					: -1
+			);
 		} else {
 			selectedActives.sort((a, b) =>
 				a[sortCondition]

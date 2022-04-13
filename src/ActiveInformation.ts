@@ -1,8 +1,6 @@
-import { Intent } from "@blueprintjs/core";
-
 interface ActiveInformation {
 	activeInfo: string;
-	severity: Intent;
+	severity: "danger" | "warning" | "none";
 	status: string;
 	trader: string;
 	counterparty: string;

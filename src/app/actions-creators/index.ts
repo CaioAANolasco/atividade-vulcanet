@@ -1,8 +1,10 @@
+import { stringify } from "querystring";
 import {
 	FetchActivesAction,
 	FilterNameAction,
 	AddFilterTagAction,
 	RemoveFilterTagAction,
+	FilterTagType,
 } from "../actions";
 import { ActionType } from "../actions-types";
 
@@ -29,6 +31,13 @@ export const removeFilterByTag = (payload: string): RemoveFilterTagAction => {
 export const filterByName = (payload: string): FilterNameAction => {
 	return {
 		type: ActionType.FILTER_NAME,
+		payload: payload,
+	};
+};
+
+export const filterTagType = (payload: string): FilterTagType => {
+	return {
+		type: ActionType.FILTER_TAG_TYPE,
 		payload: payload,
 	};
 };

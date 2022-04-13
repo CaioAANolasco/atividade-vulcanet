@@ -19,6 +19,11 @@ export interface FilterNameAction {
 	payload: string;
 }
 
+export interface FilterTagType {
+	type: ActionType.FILTER_TAG_TYPE;
+	payload: string;
+}
+
 export type Action =
 	| FetchActivesAction
 	| AddFilterTagAction

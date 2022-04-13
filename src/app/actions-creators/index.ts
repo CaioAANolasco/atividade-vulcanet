@@ -2,6 +2,7 @@ import {
 	FetchActivesAction,
 	FilterNameAction,
 	AddFilterTagAction,
+	RemoveFilterTagAction,
 } from "../actions";
 import { ActionType } from "../actions-types";
 
@@ -14,6 +15,13 @@ export const fetchActives = (): FetchActivesAction => {
 export const addFilterByTag = (payload: string): AddFilterTagAction => {
 	return {
 		type: ActionType.ADD_FILTER_TAG,
+		payload: payload,
+	};
+};
+
+export const removeFilterByTag = (payload: string): RemoveFilterTagAction => {
+	return {
+		type: ActionType.REMOVE_FILTER_TAG,
 		payload: payload,
 	};
 };

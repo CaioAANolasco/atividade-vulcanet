@@ -9,9 +9,18 @@ export interface AddFilterTagAction {
 	payload: string;
 }
 
+export interface RemoveFilterTagAction {
+	type: ActionType.REMOVE_FILTER_TAG;
+	payload: string;
+}
+
 export interface FilterNameAction {
 	type: ActionType.FILTER_NAME;
 	payload: string;
 }
 
-export type Action = FetchActivesAction | AddFilterTagAction | FilterNameAction;
+export type Action =
+	| FetchActivesAction
+	| AddFilterTagAction
+	| RemoveFilterTagAction
+	| FilterNameAction;

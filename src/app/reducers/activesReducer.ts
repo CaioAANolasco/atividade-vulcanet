@@ -12,6 +12,7 @@ interface ActivesState {
 	tagsFilter: string[];
 	inputFilter: string;
 	sortBy: SortTypes;
+	sortOrder: 1 | -1;
 }
 
 const initialState: ActivesState = {
@@ -19,6 +20,7 @@ const initialState: ActivesState = {
 	tagsFilter: [],
 	inputFilter: "",
 	sortBy: "severity",
+	sortOrder: 1,
 };
 
 const activesReducer = producer(

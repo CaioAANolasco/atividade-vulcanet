@@ -29,26 +29,27 @@ const ActiveList = () => {
 		}
 	);
 
-	let sortCondition: SortTypes;
-	sortCondition = useAppSelector((state) => state.actives.sortBy);
+	let { sortBy, sortOrder } = useAppSelector((state) => state.actives);
 
 	useMemo(() => {
 		const decreasingSeverity = [Intent.DANGER, Intent.WARNING, Intent.NONE];
-		if (sortCondition === SortingFields.SEVERITY) {
+		if (sortBy === SortingFields.SEVERITY) {
 			selectedActives.sort((a, b) =>
 				decreasingSeverity.indexOf(a.severity) >=
 				decreasingSeverity.indexOf(b.severity)
-					? 1
-					: -1
+					? 1 * sortOrder
+					: -1 * sortOrder
 			);
 		} else {
-			selectedActives.sort((a, b) =>
-				a[sortCondition]
-					.toLowerCase()
-					.localeCompare(b[sortCondition].toLowerCase())
+			selectedActives.sort(
+				(a, b) =>
+					sortOrder *
+					a[sortBy]
+						.toLowerCase()
+						.localeCompare(b[sortBy].toLowerCase())
 			);
 		}
-	}, [sortCondition, selectedActives]);
+	}, [sortBy, selectedActives, sortOrder]);
 
 	const dispatch = useAppDispatch();
 

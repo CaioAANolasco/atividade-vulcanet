@@ -5,6 +5,7 @@ import {
 	RemoveFilterTagAction,
 	ChangeSidebarFilters,
 	SortActivesAction,
+	ChangeSortOrder,
 } from "../actions";
 import { ActionType } from "../actions-types";
 import { SortTypes } from "../../SortingFields";
@@ -47,5 +48,11 @@ export const sortActives = (payload: SortTypes): SortActivesAction => {
 	return {
 		type: ActionType.SORT_ACTIVES,
 		payload: payload,
+	};
+};
+
+export const changeSortOrder = (): ChangeSortOrder => {
+	return {
+		type: ActionType.CHANGE_SORT_ORDER,
 	};
 };

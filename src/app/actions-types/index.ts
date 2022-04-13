@@ -7,4 +7,5 @@ export enum ActionType {
 	CHANGE_SIDEBAR_FILTERS = "change_sidebar_filters",
 
 	SORT_ACTIVES = "sort_actives",
+	CHANGE_SORT_ORDER = "change_sort_order",
 }

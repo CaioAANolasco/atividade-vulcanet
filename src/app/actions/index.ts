@@ -30,10 +30,15 @@ export interface SortActivesAction {
 	payload: SortTypes;
 }
 
+export interface ChangeSortOrder {
+	type: ActionType.CHANGE_SORT_ORDER;
+}
+
 export type Action =
 	| FetchActivesAction
 	| AddFilterTagAction
 	| RemoveFilterTagAction
 	| FilterNameAction
 	| ChangeSidebarFilters
-	| SortActivesAction;
+	| SortActivesAction
+	| ChangeSortOrder;

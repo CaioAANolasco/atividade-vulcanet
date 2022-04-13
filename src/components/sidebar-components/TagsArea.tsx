@@ -1,5 +1,7 @@
 import { Icon, Card } from "@blueprintjs/core";
 import { useState } from "react";
+import { removeFilterByTag } from "../../app/actions-creators";
+import { useAppDispatch } from "../../app/hooks";
 import "../styles/sidebar-styles/tags-area.scss";
 import FilterTag from "./FilterTag";
 
@@ -11,13 +13,15 @@ interface TagsAreaProps {
 const TagsArea: React.FC<TagsAreaProps> = (props: TagsAreaProps) => {
 	const [openTags, setOpenTags] = useState(false);
 	const [existingTags, setExistingTags] = useState(props.containingTags);
+	const dispatch = useAppDispatch();
 
 	const handleClick = () => {
 		setOpenTags(!openTags);
 	};
 
-	const handleRemove = (removedTag: String) => {
+	const handleRemove = (removedTag: string) => {
 		setExistingTags(existingTags?.filter((tag) => tag !== removedTag));
+		dispatch(removeFilterByTag(removedTag));
 	};
 
 	return (

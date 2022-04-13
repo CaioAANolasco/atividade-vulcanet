@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { useEffect, useMemo } from "react";
 import { fetchActives } from "../app/actions-creators";
 import ActiveInformation from "../ActiveInformation";
-import { SortingFields, SortTypes } from "../SortingFields";
+import { SortingFields } from "../SortingFields";
 import { Intent } from "@blueprintjs/core";
 
 const ActiveList = () => {

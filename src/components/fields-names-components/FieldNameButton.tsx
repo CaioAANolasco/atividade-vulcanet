@@ -1,6 +1,7 @@
 import { Button } from "@blueprintjs/core";
 import "../styles/fields-name-styles/field-names.scss";
 import { SortTypes } from "../../SortingFields";
+import { useAppSelector } from "../../app/hooks";
 
 interface FieldNameButtonProps {
 	field: SortTypes;
@@ -10,6 +11,7 @@ interface FieldNameButtonProps {
 
 const FieldNameButton = (props: FieldNameButtonProps) => {
 	const fieldName = props.field === "activeInfo" ? "title" : props.field;
+	const { sortOrder } = useAppSelector((state) => state.actives);
 
 	return (
 		<div className={`${fieldName}-field`}>
@@ -19,7 +21,10 @@ const FieldNameButton = (props: FieldNameButtonProps) => {
 				minimal={true}
 				intent={props.intent}
 				className={"filter-button"}
-				rightIcon={props.intent === "primary" && "caret-down"}
+				rightIcon={
+					props.intent === "primary" &&
+					(sortOrder === 1 ? "caret-up" : "caret-down")
+				}
 			/>
 		</div>
 	);

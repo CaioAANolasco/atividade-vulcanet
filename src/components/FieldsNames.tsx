@@ -46,7 +46,10 @@ const FieldsNames = () => {
 					}
 				/>
 				{selectedSortField === SortingFields.SEVERITY && (
-					<Icon icon="caret-down" intent="primary" />
+					<Icon
+						icon={sortOrder === 1 ? "caret-up" : "caret-down"}
+						intent="primary"
+					/>
 				)}
 			</div>
 			<FieldNameButton

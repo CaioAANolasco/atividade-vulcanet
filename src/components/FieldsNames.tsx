@@ -21,6 +21,7 @@ const FieldsNames = () => {
 				dispatch(changeSortOrder(-1));
 			} else {
 				dispatch(changeSortOrder(0));
+				setSelectedSortField("");
 			}
 		} else {
 			setSelectedSortField(sortField);

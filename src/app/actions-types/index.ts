@@ -4,5 +4,5 @@ export enum ActionType {
 	REMOVE_FILTER_TAG = "remove_filter_tag",
 	FILTER_NAME = "filter_name",
 
-	FILTER_TAG_TYPE = "filter_tag_type",
+	CHANGE_SIDEBAR_FILTERS = "change_sidebar_filters",
 }

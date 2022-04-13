@@ -19,8 +19,8 @@ export interface FilterNameAction {
 	payload: string;
 }
 
-export interface FilterTagType {
-	type: ActionType.FILTER_TAG_TYPE;
+export interface ChangeSidebarFilters {
+	type: ActionType.CHANGE_SIDEBAR_FILTERS;
 	payload: string;
 }
 
@@ -28,4 +28,5 @@ export type Action =
 	| FetchActivesAction
 	| AddFilterTagAction
 	| RemoveFilterTagAction
-	| FilterNameAction;
+	| FilterNameAction
+	| ChangeSidebarFilters;

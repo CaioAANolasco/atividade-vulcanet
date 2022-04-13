@@ -4,7 +4,7 @@ import {
 	FilterNameAction,
 	AddFilterTagAction,
 	RemoveFilterTagAction,
-	FilterTagType,
+	ChangeSidebarFilters,
 } from "../actions";
 import { ActionType } from "../actions-types";
 
@@ -35,9 +35,9 @@ export const filterByName = (payload: string): FilterNameAction => {
 	};
 };
 
-export const filterTagType = (payload: string): FilterTagType => {
+export const filterTagType = (payload: string): ChangeSidebarFilters => {
 	return {
-		type: ActionType.FILTER_TAG_TYPE,
+		type: ActionType.CHANGE_SIDEBAR_FILTERS,
 		payload: payload,
 	};
 };

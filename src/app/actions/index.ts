@@ -32,6 +32,7 @@ export interface SortActivesAction {
 
 export interface ChangeSortOrder {
 	type: ActionType.CHANGE_SORT_ORDER;
+	payload: 1 | 0 | -1;
 }
 
 export type Action =

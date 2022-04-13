@@ -15,10 +15,17 @@ const FieldsNames = () => {
 
 	const handleClick = (sortField: SortTypes) => {
 		if (sortField === selectedSortField) {
-			dispatch(changeSortOrder());
+			if (sortOrder === 0) {
+				dispatch(changeSortOrder(1));
+			} else if (sortOrder === 1) {
+				dispatch(changeSortOrder(-1));
+			} else {
+				dispatch(changeSortOrder(0));
+			}
 		} else {
 			setSelectedSortField(sortField);
 			dispatch(sortActives(sortField));
+			dispatch(changeSortOrder(1));
 		}
 	};
 

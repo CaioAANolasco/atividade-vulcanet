@@ -51,8 +51,9 @@ export const sortActives = (payload: SortTypes): SortActivesAction => {
 	};
 };
 
-export const changeSortOrder = (): ChangeSortOrder => {
+export const changeSortOrder = (payload: 0 | 1 | -1): ChangeSortOrder => {
 	return {
 		type: ActionType.CHANGE_SORT_ORDER,
+		payload: payload,
 	};
 };

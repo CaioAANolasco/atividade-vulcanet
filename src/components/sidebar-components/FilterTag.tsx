@@ -2,7 +2,7 @@ import { Tag, Icon } from "@blueprintjs/core";
 import React, { useState } from "react";
 import { useAppDispatch } from "../../app/hooks";
 import "../styles/sidebar-styles/tags-area.scss";
-import { addFilterByTag } from "../../app/actions-creators";
+import { addFilterByTag, removeFilterByTag } from "../../app/actions-creators";
 
 interface FilterTagProps {
 	tagID: string;
@@ -14,7 +14,9 @@ const FilterTag: React.FC<FilterTagProps> = (props) => {
 	const dispatch = useAppDispatch();
 
 	const handleClickOnTag = (tagID: string) => {
-		dispatch(addFilterByTag(tagID));
+		selected
+			? dispatch(removeFilterByTag(tagID))
+			: dispatch(addFilterByTag(tagID));
 		setSelected(!selected);
 	};
 

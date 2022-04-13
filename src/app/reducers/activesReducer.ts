@@ -25,12 +25,15 @@ const activesReducer = producer(
 				return activesState;
 			case ActionType.ADD_FILTER_TAG:
 				activesState.tagsFilter.push(action.payload.toLowerCase());
+				console.log(activesState.tagsFilter);
 				return activesState;
 			case ActionType.REMOVE_FILTER_TAG:
+				activesState.tagsFilter = activesState.tagsFilter.filter(
+					(t) => t !== action.payload.toLowerCase()
+				);
 				return activesState;
 			case ActionType.FILTER_NAME:
 				activesState.inputFilter = action.payload.toLowerCase();
-				console.log(activesState.inputFilter);
 				return activesState;
 			default:
 				return activesState;

@@ -19,6 +19,7 @@ const FieldNameButton = (props: FieldNameButtonProps) => {
 				minimal={true}
 				intent={props.intent}
 				className={"filter-button"}
+				rightIcon={props.intent === "primary" && "caret-down"}
 			/>
 		</div>
 	);

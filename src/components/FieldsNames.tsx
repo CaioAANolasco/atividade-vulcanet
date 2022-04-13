@@ -38,14 +38,9 @@ const FieldsNames = () => {
 							: "none"
 					}
 				/>
-				<Icon
-					icon="caret-down"
-					intent={
-						selectedSortField === SortingFields.SEVERITY
-							? "primary"
-							: "none"
-					}
-				/>
+				{selectedSortField === SortingFields.SEVERITY && (
+					<Icon icon="caret-down" intent="primary" />
+				)}
 			</div>
 			<FieldNameButton
 				field="status"

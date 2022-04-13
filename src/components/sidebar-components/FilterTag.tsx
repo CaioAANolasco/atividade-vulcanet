@@ -21,7 +21,9 @@ const FilterTag: React.FC<FilterTagProps> = (props) => {
 	return (
 		<Tag
 			large={true}
-			className="tag"
+			className={` tag ${
+				selected ? "tag-selected" : "tag-not-selected"
+			} `}
 			data-id={props.tagID}
 			onClick={(e) => handleClickOnTag(props.tagID)}
 		>

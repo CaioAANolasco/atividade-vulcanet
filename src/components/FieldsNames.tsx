@@ -1,4 +1,4 @@
-import { Card, Icon, Button } from "@blueprintjs/core";
+import { Card, Icon } from "@blueprintjs/core";
 import { useDispatch } from "react-redux";
 import { sortActives } from "../app/actions-creators";
 import "./styles/fields-name-styles/field-names.scss";

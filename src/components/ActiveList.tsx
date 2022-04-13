@@ -1,11 +1,37 @@
-import ActiveInfo, { ActiveInfoProps } from "./actives-components/ActiveInfo";
+import ActiveInfo from "./actives-components/ActiveInfo";
+import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { useEffect } from "react";
+import { fetchActives } from "../app/actions-creators";
+import ActiveInformation from "../ActiveInformation";
 
 const ActiveList = () => {
-	const jsonData: ActiveInfoProps[] = require("../ACTIVEINFO.json");
+	const selectedActives = useAppSelector(
+		({ actives: { actives, inputFilter, tagsFilter } }) => {
+			return actives.filter((active) => {
+				const selectedByName = active.activeInfo
+					.toLowerCase()
+					.includes(inputFilter);
+
+				let selectedByTag: boolean;
+				if (tagsFilter.length === 0) {
+					selectedByTag = true;
+				} else {
+					selectedByTag = tagsFilter.includes(active.status);
+				}
+
+				return selectedByName && selectedByTag;
+			});
+		}
+	);
+	const dispatch = useAppDispatch();
+
+	useEffect(() => {
+		dispatch(fetchActives);
+	}, [dispatch]);
 
 	return (
 		<div>
-			{jsonData.map((active) => {
+			{selectedActives.map((active: ActiveInformation) => {
 				return (
 					<ActiveInfo
 						activeInfo={active.activeInfo}

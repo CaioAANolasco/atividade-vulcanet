@@ -4,12 +4,22 @@ import ActiveInformation from "../../ActiveInformation";
 import producer from "immer";
 
 const jsonData: ActiveInformation[] = require("../../ACTIVEINFO.json");
-const initialState = jsonData;
+const initialStateActiveData = jsonData;
+
+interface ActivesState {
+	actives: ActiveInformation[];
+	tagsFilter: string[];
+	inputFilter: string;
+}
+
+const initialState: ActivesState = {
+	actives: initialStateActiveData,
+	tagsFilter: [],
+	inputFilter: "",
+};
+
 const activesReducer = producer(
-	(
-		activesState = { actives: initialState, tags: [], input: "" },
-		action: Action
-	) => {
+	(activesState: ActivesState = initialState, action: Action) => {
 		switch (action.type) {
 			case ActionType.FETCH_ACTIVES:
 				return activesState;
@@ -17,7 +27,7 @@ const activesReducer = producer(
 				//sort by price
 				return activesState;
 			case ActionType.FILTER_NAME:
-				activesState.input = action.payload;
+				activesState.inputFilter = action.payload;
 				return activesState;
 			default:
 				return activesState;

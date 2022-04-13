@@ -8,9 +8,11 @@ const MenuNavBar = () => {
 				<Icon
 					icon="rocket-slant"
 					className="navbar-icon"
-					size={20}
+					size={32}
 				></Icon>
-				<Navbar.Heading>RADAR</Navbar.Heading>
+				<Navbar.Heading className="navbar-heading">
+					RADAR
+				</Navbar.Heading>
 			</Navbar.Group>
 
 			<Navbar.Group className="navbar-buttons" align={Alignment.RIGHT}>

@@ -5,22 +5,19 @@ import FilterTag from "./FilterTag";
 
 interface TagsAreaProps {
 	text: String;
+	containingTags?: string[];
 }
 
 const TagsArea: React.FC<TagsAreaProps> = (props: TagsAreaProps) => {
 	const [openTags, setOpenTags] = useState(false);
-	const [existingTags, setExistingTags] = useState([
-		"Open",
-		"Closed",
-		"Escalated",
-	]);
+	const [existingTags, setExistingTags] = useState(props.containingTags);
 
 	const handleClick = () => {
 		setOpenTags(!openTags);
 	};
 
 	const handleRemove = (removedTag: String) => {
-		setExistingTags(existingTags.filter((tag) => tag !== removedTag));
+		setExistingTags(existingTags?.filter((tag) => tag !== removedTag));
 	};
 
 	return (
@@ -36,7 +33,7 @@ const TagsArea: React.FC<TagsAreaProps> = (props: TagsAreaProps) => {
 			</Card>
 			{openTags && (
 				<div className="tags-container">
-					{existingTags.map((tag) => (
+					{existingTags?.map((tag) => (
 						<FilterTag tagID={tag} handleRemove={handleRemove} />
 					))}
 				</div>

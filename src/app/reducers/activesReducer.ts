@@ -43,6 +43,11 @@ const activesReducer = producer(
 			case ActionType.SORT_ACTIVES:
 				activesState.sortBy = action.payload;
 				return activesState;
+			case ActionType.CHANGE_SORT_ORDER:
+				activesState.sortOrder === 1
+					? (activesState.sortOrder = -1)
+					: (activesState.sortOrder = 1);
+				return activesState;
 			default:
 				return activesState;
 		}

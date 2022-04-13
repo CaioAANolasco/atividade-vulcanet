@@ -5,9 +5,12 @@
 	background-color: palette.$secondary-color;
 	width: 100%;
 	padding: 0.8rem 0.8rem 1.1rem 0.5rem !important;
+	display: flex;
 	text-align: center;
+	align-content: center;
 	border-radius: inherit;
-	height: 6vh;
+	align-items: center;
+	height: 7vh;
 }
 
 .flags-navbar-button {
@@ -21,7 +24,9 @@
 }
 
 .flags-navbar-text {
+	position: relative;
+	left: 20%;
 	align-self: center;
-	display: inline;
 	color: white;
+	right: 50%;
 }

@@ -26,7 +26,10 @@ const MenuFlags = () => {
 	return (
 		<div>
 			{sidebarFiltersSelected.map((filter) => (
-				<TagsArea text={filter.filterName} />
+				<TagsArea
+					text={filter.filterName}
+					containingTags={filter.tags}
+				/>
 			))}
 		</div>
 	);

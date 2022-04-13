@@ -16,7 +16,9 @@ const ActiveList = () => {
 				if (tagsFilter.length === 0) {
 					selectedByTag = true;
 				} else {
-					selectedByTag = tagsFilter.includes(active.status);
+					selectedByTag = tagsFilter.includes(
+						active.status.toLowerCase()
+					);
 				}
 
 				return selectedByName && selectedByTag;

@@ -24,7 +24,7 @@ const activesReducer = producer(
 			case ActionType.FETCH_ACTIVES:
 				return activesState;
 			case ActionType.FILTER_TAG:
-				//sort by price
+				activesState.tagsFilter.push(action.payload.toLowerCase());
 				return activesState;
 			case ActionType.FILTER_NAME:
 				activesState.inputFilter = action.payload.toLowerCase();

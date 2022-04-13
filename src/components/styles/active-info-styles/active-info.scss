@@ -1,6 +1,13 @@
+@import "~@blueprintjs/core/lib/scss/variables";
 .active-display {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	align-content: center;
+}
+
+h5 {
+	font-size: 0.95rem;
+	color: $gray2;
+	font-weight: 600;
 }

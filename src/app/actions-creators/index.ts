@@ -1,7 +1,7 @@
 import {
 	FetchActivesAction,
 	FilterNameAction,
-	FilterTagAction,
+	AddFilterTagAction,
 } from "../actions";
 import { ActionType } from "../actions-types";
 
@@ -11,9 +11,9 @@ export const fetchActives = (): FetchActivesAction => {
 	};
 };
 
-export const filterByTag = (payload: string): FilterTagAction => {
+export const addFilterByTag = (payload: string): AddFilterTagAction => {
 	return {
-		type: ActionType.FILTER_TAG,
+		type: ActionType.ADD_FILTER_TAG,
 		payload: payload,
 	};
 };

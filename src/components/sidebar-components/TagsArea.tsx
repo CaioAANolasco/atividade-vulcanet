@@ -1,7 +1,7 @@
 import { Tag, Icon, Card } from "@blueprintjs/core";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { filterByTag } from "../../app/actions-creators";
+import { addFilterByTag } from "../../app/actions-creators";
 import "../styles/sidebar-styles/tags-area.scss";
 
 interface TagsAreaProps {
@@ -22,7 +22,7 @@ const TagsArea: React.FC<TagsAreaProps> = (props: TagsAreaProps) => {
 	};
 
 	const handleClickOnTag = (tagID: string) => {
-		dispatch(filterByTag(tagID));
+		dispatch(addFilterByTag(tagID));
 	};
 
 	const handleRemove = (removedTag: String) => {

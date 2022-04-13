@@ -4,8 +4,8 @@ export interface FetchActivesAction {
 	type: ActionType.FETCH_ACTIVES;
 }
 
-export interface FilterTagAction {
-	type: ActionType.FILTER_TAG;
+export interface AddFilterTagAction {
+	type: ActionType.ADD_FILTER_TAG;
 	payload: string;
 }
 
@@ -14,4 +14,4 @@ export interface FilterNameAction {
 	payload: string;
 }
 
-export type Action = FetchActivesAction | FilterTagAction | FilterNameAction;
+export type Action = FetchActivesAction | AddFilterTagAction | FilterNameAction;

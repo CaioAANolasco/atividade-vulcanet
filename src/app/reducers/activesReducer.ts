@@ -23,7 +23,7 @@ const activesReducer = producer(
 		switch (action.type) {
 			case ActionType.FETCH_ACTIVES:
 				return activesState;
-			case ActionType.FILTER_TAG:
+			case ActionType.ADD_FILTER_TAG:
 				activesState.tagsFilter.push(action.payload.toLowerCase());
 				return activesState;
 			case ActionType.FILTER_NAME:

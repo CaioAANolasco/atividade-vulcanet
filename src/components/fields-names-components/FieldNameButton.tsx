@@ -18,6 +18,7 @@ const FieldNameButton = (props: FieldNameButtonProps) => {
 				onClick={() => props.handleClick(props.field)}
 				minimal={true}
 				intent={props.intent}
+				className={"filter-button"}
 			/>
 		</div>
 	);

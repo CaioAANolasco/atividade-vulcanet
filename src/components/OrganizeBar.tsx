@@ -4,6 +4,7 @@ import {
 	Navbar,
 	NavbarDivider,
 	NavbarGroup,
+	Tag,
 } from "@blueprintjs/core";
 import { ChangeEvent } from "react";
 import "./styles/organize-styles/organize-bar.scss";
@@ -23,9 +24,14 @@ const OrganizeBar = () => {
 				<InputGroup
 					leftIcon="search"
 					round={true}
-					placeholder="Search for assets"
+					placeholder="Search for alerts..."
 					className="search-bar"
 					onChange={handleChange}
+					rightElement={
+						<Tag minimal={true} round={true}>
+							152
+						</Tag>
+					}
 				></InputGroup>
 				<Button
 					text="List"

@@ -17,6 +17,8 @@
 	float: left;
 	padding-left: 0 !important;
 	color: palette.$sidebar-icon-color !important;
+	font-family: "Barlow";
+	font-size: 0.9rem;
 }
 
 .flags-navbar-button .bp4-icon {
@@ -24,10 +26,11 @@
 }
 
 .flags-navbar-text {
+	font-family: "Rubik";
 	position: relative;
 	left: 15%;
 	align-self: center;
-	color: $gray4;
+	color: $gray5;
 	right: 50%;
-	font-weight: 500;
+	font-weight: 400;
 }

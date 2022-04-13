@@ -9,10 +9,20 @@
 	height: 6vh;
 }
 
+.filter-button {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	font-family: "Rubik";
+	font-weight: 500;
+}
+
 .title-field {
 	flex-wrap: wrap;
 	width: 30%;
 	margin-right: 3%;
+	font-family: "Rubik";
+	font-size: 0.9rem;
+	font-weight: 500;
 }
 
 .severity-field {

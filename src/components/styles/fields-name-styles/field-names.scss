@@ -34,11 +34,12 @@
 }
 
 .status-tag {
+	font-family: "Rubik";
 	width: 65%;
 	background-color: white;
 	color: $gray2;
 	text-align: center;
-	font-weight: bold;
+	font-weight: 600;
 	outline: #d2dce2 solid 3px;
 	padding: 0 0.2rem;
 }

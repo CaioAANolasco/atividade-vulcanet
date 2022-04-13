@@ -1,3 +1,5 @@
+@import "~@blueprintjs/core/lib/scss/variables";
+
 .field-name-container {
 	display: flex;
 	flex-direction: row;
@@ -10,15 +12,24 @@
 .title-field {
 	flex-wrap: wrap;
 	width: 35%;
-	margin-right: 5%;
+	margin-right: 3%;
 }
 
 .severity-field {
-	width: 10%;
+	width: 7%;
 }
 
 .status-field {
-	width: 10%;
+	width: 13%;
+}
+
+.status-tag {
+	width: 65%;
+	background-color: white;
+	color: $gray2;
+	text-align: center;
+	font-weight: bold;
+	outline: #d2dce2 solid 3px;
 }
 
 .trader-field {

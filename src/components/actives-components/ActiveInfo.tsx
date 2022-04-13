@@ -1,4 +1,4 @@
-import { Card, Tag, Code } from "@blueprintjs/core";
+import { Card, Tag, Classes } from "@blueprintjs/core";
 import "../styles/active-info-styles/active-info.scss";
 import "../styles/fields-name-styles/field-names.scss";
 import ActiveInformation from "../../ActiveInformation";
@@ -12,7 +12,7 @@ const ActiveInfo: React.FC<ActiveInformation> = (props) => {
 			</div>
 
 			<div className="status-field">
-				<Code>{props.status}</Code>
+				<Tag className={`status-tag`}>{props.status}</Tag>
 			</div>
 
 			<h5 className="trader-field">{props.trader}</h5>

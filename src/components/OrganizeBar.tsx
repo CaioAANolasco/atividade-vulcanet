@@ -5,18 +5,16 @@ import {
 	NavbarDivider,
 	NavbarGroup,
 } from "@blueprintjs/core";
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent } from "react";
 import "./styles/organize-styles/organize-bar.scss";
 import { useAppDispatch } from "../app/hooks";
 import { filterByName } from "../app/actions-creators";
 
 const OrganizeBar = () => {
 	const dispatch = useAppDispatch();
-	const [searchInput, setSearchInput] = useState("");
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-		setSearchInput(e.target.value);
-		dispatch(filterByName(searchInput));
+		dispatch(filterByName(e.target.value));
 	};
 
 	return (

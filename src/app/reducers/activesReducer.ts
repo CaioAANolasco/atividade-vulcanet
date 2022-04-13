@@ -28,6 +28,7 @@ const activesReducer = producer(
 				return activesState;
 			case ActionType.FILTER_NAME:
 				activesState.inputFilter = action.payload.toLowerCase();
+				console.log(activesState.inputFilter);
 				return activesState;
 			default:
 				return activesState;

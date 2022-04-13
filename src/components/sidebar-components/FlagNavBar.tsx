@@ -13,7 +13,7 @@ const FlagNavBar = () => {
 				className="flags-navbar-button"
 			></Button>
 
-			<h4 className="flags-navbar-text">OPEN FLAGS</h4>
+			<h3 className="flags-navbar-text">OPEN FLAGS</h3>
 		</Card>
 	);
 };

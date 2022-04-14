@@ -12,6 +12,7 @@ interface ActivesState {
 	tagsFilter: string[];
 	inputFilter: string;
 	sortBy: SortTypes;
+	sortOrder: 0 | 1 | -1;
 }
 
 const initialState: ActivesState = {
@@ -19,6 +20,7 @@ const initialState: ActivesState = {
 	tagsFilter: [],
 	inputFilter: "",
 	sortBy: "severity",
+	sortOrder: 1,
 };
 
 const activesReducer = producer(
@@ -40,6 +42,9 @@ const activesReducer = producer(
 				return activesState;
 			case ActionType.SORT_ACTIVES:
 				activesState.sortBy = action.payload;
+				return activesState;
+			case ActionType.CHANGE_SORT_ORDER:
+				activesState.sortOrder = action.payload;
 				return activesState;
 			default:
 				return activesState;

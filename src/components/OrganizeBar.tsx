@@ -28,7 +28,11 @@ const OrganizeBar = () => {
 					className="search-bar"
 					onChange={handleChange}
 					rightElement={
-						<Tag minimal={true} round={true}>
+						<Tag
+							minimal={true}
+							round={true}
+							className="search-bar-tag"
+						>
 							152
 						</Tag>
 					}

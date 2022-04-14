@@ -38,13 +38,15 @@ const ActiveList = () => {
 	let { sortBy, sortOrder } = useAppSelector((state) => state.actives); // Read sorting criteria from Redux state
 
 	useMemo(() => {
-		const decreasingSeverity = [Intent.DANGER, Intent.WARNING, Intent.NONE];
+		// Sorting is done in a useMemo hook to avoid sorting needlessly on every re-render
+		const decreasingSeverity = [Intent.DANGER, Intent.WARNING, Intent.NONE]; // Order of severity priority
 		if (sortBy === SortingFields.SEVERITY) {
-			selectedActives.sort((a, b) =>
-				decreasingSeverity.indexOf(a.severity) >=
-				decreasingSeverity.indexOf(b.severity)
-					? 1 * sortOrder
-					: -1 * sortOrder
+			selectedActives.sort(
+				(a, b) =>
+					decreasingSeverity.indexOf(a.severity) >=
+					decreasingSeverity.indexOf(b.severity)
+						? 1 * sortOrder
+						: -1 * sortOrder // Sort by index of severiy in by the priority established; if descending, swap the original ordering
 			);
 		} else {
 			selectedActives.sort(
@@ -53,6 +55,7 @@ const ActiveList = () => {
 					a[sortBy]
 						.toLowerCase()
 						.localeCompare(b[sortBy].toLowerCase())
+				// Sort by string comparsionin of the selected criteria; if descending, swap the original ordering
 			);
 		}
 	}, [sortBy, selectedActives, sortOrder]);
@@ -61,11 +64,12 @@ const ActiveList = () => {
 
 	useEffect(() => {
 		dispatch(fetchActives);
-	}, [dispatch]);
+	}, [dispatch]); // Call useEffect hook on component mount
 
 	return (
 		<div>
 			{selectedActives.map((active: ActiveInformation) => {
+				// Map filtered actives to render proper components
 				return (
 					<ActiveInfo
 						activeInfo={active.activeInfo}

@@ -1,6 +1,8 @@
 import { ActionType } from "../actions-types";
 import { SortTypes } from "../../SortingFields";
 
+// Interfaces for Redux actions and definition for a Action type
+
 export interface FetchActivesAction {
 	type: ActionType.FETCH_ACTIVES;
 }

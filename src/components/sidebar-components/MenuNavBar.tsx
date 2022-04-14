@@ -1,5 +1,7 @@
-import { Navbar, Button, Alignment, Icon } from "@blueprintjs/core";
+import { Navbar, Button, Alignment } from "@blueprintjs/core";
 import "../styles/sidebar-styles/menu-navbar.scss";
+
+// Sidebar top navigation bar, with logo, heading and icon buttons
 
 const MenuNavBar = () => {
 	return (

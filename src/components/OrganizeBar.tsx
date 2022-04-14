@@ -11,11 +11,13 @@ import "./styles/organize-styles/organize-bar.scss";
 import { useAppDispatch } from "../app/hooks";
 import { filterByName } from "../app/actions-creators";
 
+// Top navigation bar for searching and organizing gields
+
 const OrganizeBar = () => {
 	const dispatch = useAppDispatch();
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-		dispatch(filterByName(e.target.value));
+		dispatch(filterByName(e.target.value)); // Update search input in Redux state
 	};
 
 	return (

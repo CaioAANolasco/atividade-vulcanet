@@ -7,14 +7,17 @@ import { useState } from "react";
 import FieldNameButton from "./fields-names-components/FieldNameButton";
 import { useAppSelector } from "../app/hooks";
 
+// Component that displays columns titles on active information
+
 const FieldsNames = () => {
-	const [selectedSortField, setSelectedSortField] = useState("severity");
+	const [selectedSortField, setSelectedSortField] = useState("severity"); // Default ordering is done by severity
 	const dispatch = useDispatch();
 
-	const { sortOrder } = useAppSelector((state) => state.actives);
+	const { sortOrder } = useAppSelector((state) => state.actives); // From Redux state, check if sorting is ascending, descending or unselected
 
 	const handleClick = (sortField: SortTypes) => {
 		if (sortField === selectedSortField) {
+			// If clicked choice matches already selected field
 			if (sortOrder === 0) {
 				dispatch(changeSortOrder(1));
 			} else if (sortOrder === 1) {
@@ -22,8 +25,10 @@ const FieldsNames = () => {
 			} else {
 				dispatch(changeSortOrder(0));
 				setSelectedSortField("");
+				// Change sorting order to next logical value;
 			}
 		} else {
+			// If clicked option is different from current sorting criteria, update Redux state
 			setSelectedSortField(sortField);
 			dispatch(sortActives(sortField));
 			dispatch(changeSortOrder(1));
@@ -36,7 +41,7 @@ const FieldsNames = () => {
 				field="activeInfo"
 				handleClick={handleClick}
 				intent={
-					selectedSortField === SortingFields.ACTIVE_INFO
+					selectedSortField === SortingFields.ACTIVE_INFO // Change field display according to selected option
 						? "primary"
 						: "none"
 				}

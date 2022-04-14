@@ -10,6 +10,8 @@ import {
 import { ActionType } from "../actions-types";
 import { SortTypes } from "../../SortingFields";
 
+// Action creator that get called through Redux dispatch()
+
 export const fetchActives = (): FetchActivesAction => {
 	return {
 		type: ActionType.FETCH_ACTIVES,

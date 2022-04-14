@@ -1,3 +1,5 @@
+//Enum object for easier to read reference to action types
+
 export enum ActionType {
 	FETCH_ACTIVES = "fetch_actives",
 	ADD_FILTER_TAG = "add_filter_tag",

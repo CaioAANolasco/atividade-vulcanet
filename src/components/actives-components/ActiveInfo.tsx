@@ -1,7 +1,9 @@
-import { Card, Tag, Classes } from "@blueprintjs/core";
+import { Card, Tag } from "@blueprintjs/core";
 import "../styles/active-info-styles/active-info.scss";
 import "../styles/fields-name-styles/field-names.scss";
-import ActiveInformation from "../../ActiveInformation";
+import ActiveInformation from "../../ActiveInformation"; // Active information interface comes from separate file for reusability.
+
+// Component for actives information card, with title, severity, status, trader, counterparty, book, source.
 
 const ActiveInfo: React.FC<ActiveInformation> = (props) => {
 	return (

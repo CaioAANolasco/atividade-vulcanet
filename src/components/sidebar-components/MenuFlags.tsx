@@ -1,8 +1,10 @@
 import { useAppSelector } from "../../app/hooks";
 import TagsArea from "./TagsArea";
 
+// Sidebar component to display possible subjects for filtering tags
+
 const allFilters = [
-	{ filterName: "Status", tags: ["Open", "Closed", "Escalated"] },
+	{ filterName: "Status", tags: ["Open", "Closed", "Escalated"] }, // Currently, only status flag has tag options
 	{ filterName: "Time", tags: [] },
 	{ filterName: "Assignee", tags: [] },
 	{ filterName: "Watcher", tags: [] },
@@ -20,7 +22,7 @@ const MenuFlags = () => {
 					.toLowerCase()
 					.includes(filterInput);
 			});
-		}
+		} // Receive filter from redux state, and apply input over possible options
 	);
 
 	return (

@@ -1,6 +1,8 @@
 import { Card, Button } from "@blueprintjs/core";
 import "../styles/sidebar-styles/flags-navbar.scss";
 
+// Title bar for available flags on menu
+
 const FlagNavBar = () => {
 	return (
 		<Card className="flags-navbar-container">

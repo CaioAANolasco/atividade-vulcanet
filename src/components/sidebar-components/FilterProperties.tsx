@@ -8,7 +8,7 @@ const FilterProperties = () => {
 	const dispatch = useAppDispatch();
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-		dispatch(changeSidebarFilters(e.target.value));
+		dispatch(changeSidebarFilters(e.target.value)); // Change sidebar filters redux state as user types
 	};
 
 	return (

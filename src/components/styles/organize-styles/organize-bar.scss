@@ -1,9 +1,10 @@
 @use "../palette.scss";
+@import "~@blueprintjs/core/lib/scss/variables";
 
 .organize-bar {
 	width: 100%;
 	background-color: palette.$organize-bar-backgorund;
-	margin-bottom: 3px;
+	box-shadow: $pt-elevation-shadow-2;
 }
 
 .search-group {

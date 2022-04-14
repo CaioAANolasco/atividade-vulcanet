@@ -1,12 +1,14 @@
 @import "~@blueprintjs/core/lib/scss/variables";
 
 .field-name-container {
+	box-shadow: $pt-elevation-shadow-1 !important;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
 	border-radius: 0;
 	height: 7vh;
+	margin-bottom: 1px;
 }
 
 .filter-button {

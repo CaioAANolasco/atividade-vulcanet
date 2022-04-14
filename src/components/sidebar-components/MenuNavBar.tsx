@@ -3,7 +3,7 @@ import "../styles/sidebar-styles/menu-navbar.scss";
 
 const MenuNavBar = () => {
 	return (
-		<Navbar className="navbar bp4-elevation-4">
+		<Navbar className="navbar">
 			<Navbar.Group align={Alignment.LEFT}>
 				<div className="navbar-icon"></div>
 				<Navbar.Heading className="navbar-heading">

@@ -6,10 +6,13 @@
 	background-color: palette.$primary-color !important;
 	color: white;
 	box-shadow: $pt-elevation-shadow-1;
+	height: 8vh;
+	flex-wrap: wrap;
+	padding-top: 1vh;
 }
 
 .navbar-heading {
-	font-size: 1.3rem;
+	font-size: 1.5vw;
 	letter-spacing: 0.05rem;
 }
 

@@ -28,7 +28,7 @@ const TagsArea: React.FC<TagsAreaProps> = (props: TagsAreaProps) => {
 		<div className="menu-button-container">
 			<Card
 				className="menu-button"
-				elevation={4}
+				elevation={2}
 				onClick={handleClick}
 				interactive={true}
 			>

@@ -16,7 +16,7 @@ const FieldsNames = () => {
 	};
 
 	return (
-		<Card className="field-name-container" elevation={2}>
+		<Card className="field-name-container" elevation={1}>
 			<FieldNameButton
 				field="activeInfo"
 				handleClick={handleClick}

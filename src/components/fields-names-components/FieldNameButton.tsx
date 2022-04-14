@@ -1,12 +1,14 @@
 import { Button } from "@blueprintjs/core";
 import "../styles/fields-name-styles/field-names.scss";
-import { SortTypes } from "../../SortingFields";
 import { useAppSelector } from "../../app/hooks";
+import { SortTypes } from "../../SortingFields"; // Sorting types are derived from a proper interface that is also reused.
+
+// Separate components to display active information column titles, and implement sorting criteria changing logic.
 
 interface FieldNameButtonProps {
 	field: SortTypes;
-	intent: "primary" | "none";
-	handleClick: (a: SortTypes) => void;
+	intent: "primary" | "none"; // intent is used to display selected and unselected fields
+	handleClick: (a: SortTypes) => void; // handle click function derived from parent; makes proper dispatch action to change state
 }
 
 const FieldNameButton = (props: FieldNameButtonProps) => {
@@ -24,7 +26,7 @@ const FieldNameButton = (props: FieldNameButtonProps) => {
 				rightIcon={
 					props.intent === "primary" &&
 					(sortOrder === 1 ? "caret-up" : "caret-down")
-				}
+				} //if field is selected, change color and display down caret icon
 			/>
 		</div>
 	);

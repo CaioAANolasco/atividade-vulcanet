@@ -5,11 +5,7 @@ const MenuNavBar = () => {
 	return (
 		<Navbar className="navbar bp4-elevation-4">
 			<Navbar.Group align={Alignment.LEFT}>
-				<Icon
-					icon="rocket-slant"
-					className="navbar-icon"
-					size={32}
-				></Icon>
+				<div className="navbar-icon"></div>
 				<Navbar.Heading className="navbar-heading">
 					RADAR
 				</Navbar.Heading>
